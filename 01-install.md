@@ -46,14 +46,16 @@ cross-platform.
 
 Did you install Python 2 or 3? Why?  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> 3. I have never encountered a package that was not already supported by 3.
+
+>> I know they exist, but I haven't needed to use them as of yet.
 
 ###Q2. Which Python Version Installed   
 
 How can you check the version of Python installed if you happen to be on an unfamiliar computer?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+```
+python --version
+```
 
- 
-
-
+>> Slap that in the terminal and you'll know.
