@@ -46,7 +46,7 @@ cross-platform.
 
 Did you install Python 2 or 3? Why?  
 
->> 3. I have never encountered a package that was not already supported by 3.
+>> I installed Python 3.  I have never encountered a package that was not already supported by 3.
 
 >> I know they exist, but I haven't needed to use them as of yet.
 
