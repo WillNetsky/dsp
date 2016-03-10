@@ -55,6 +55,6 @@ Here's your first chance to practice this:
 
 What is your favorite [emoji](http://www.emoji-cheat-sheet.com/)?
 
->> :hamburger: because it's not a hamburger, its actually a cheeseburger.
+>> :hamburger: because it's not a hamburger, it's actually a cheeseburger.
 
->> a closed second is :beers:
+>> A close second is :beers:

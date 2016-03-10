@@ -46,9 +46,7 @@ cross-platform.
 
 Did you install Python 2 or 3? Why?  
 
->> I installed Python 3.  I have never encountered a package that was not already supported by 3.
-
->> I know they exist, but I haven't needed to use them as of yet.
+>> I installed Python 3.  That's what I've already used to learn Python in the past. I know there are potentially some packages that are not yet supported, but I haven't encountered any problems as of yet.
 
 ###Q2. Which Python Version Installed   
 
@@ -58,4 +56,4 @@ How can you check the version of Python installed if you happen to be on an unfa
 python --version
 ```
 
->> Slap that in the terminal and you'll know.
+>> That command in your terminal will tell you. As will invoking the python interpreter with the command 'python'.

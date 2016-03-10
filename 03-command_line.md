@@ -86,7 +86,7 @@ What does `xargs` do? Give an example of how to use it.
 
 > > example: find /path -type f -print | xargs rm
 
-> > This command takes the result of find (which is printing out all of the files within /path) and pipes it into xargs. Xargs takes the list of filenames and adds each as an argument to rm. Effectively this will remove every file within /path. This could also possibly work with the command "rm `find /path -type f`"; however, it may fail depending on the number of files found and the max command line length of the system
+> > This command takes the result of find (which is printing out all of the files within /path) and pipes it into xargs. Xargs takes the list of filenames and adds each as an argument to rm. Effectively this will remove every file within /path. This could also possibly work with the command "rm `find /path -type f`"; however, it may fail depending on the number of files found and the max command line length of the system.
 
  
 

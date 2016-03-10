@@ -68,3 +68,5 @@ What terminal editor will you use? How did you make your decision?
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
 >> I'll use PyCharm and Sublime. PyCharm has many of the features that are now standard in advanced editors, such as code completion and smart searching for all instances of methods/variables/etc. In addition it has a built-in debugger and support for the scientific stack that we'll be using. As for keyboard shortcuts, [there are a lot](https://resources.jetbrains.com/assets/products/pycharm/PyCharm_ReferenceCard_mac.pdf). There are hundres of little things that I can do to customize it, but as of right now I've just chosen a dark theme because I find it easier on the eyes.
+
+>> As for Sublime, I'll use it for most non-Python uses. Such as editing this markdown file.
