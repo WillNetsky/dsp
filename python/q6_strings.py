@@ -18,6 +18,9 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
+    if count > 9:
+        count = 'many'
+    return 'Number of donuts: ' + str(count)
     raise NotImplementedError
 
 
@@ -37,6 +40,10 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
+    if len(s) < 2:
+        return ''
+    return s[:2] + s[-2:]
+
     raise NotImplementedError
 
 
@@ -56,6 +63,9 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
+    return s[0] + s[1:].replace(s[0], '*')
+
+
     raise NotImplementedError
 
 
