@@ -12,7 +12,15 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+> Tuples and lists are both objects that contain a sequence of values. They can both have their individual elements
+accessed with index notation (square brackets with the index number(s)). There are a few differences, however. Lists are  
+mutable, meaning that their value can change in place. Tuples are immutable, meaning they are static once created.  
+In Python, assignment is not mutation. This means that you can still change the value of a tuple, you just have to  
+reassign it. For example, there are no built-in functions to append an item to a tuple, the way there is for a list.  
+  
+> Tuples can be used as keys in dictionaries, while lists cannot. This is because, in Python, a dictionary key must  
+be hashable. An object is considered hashable if it has a hash value that never changes in its lifetime. This means  
+that all immutable Python types can be used as dictionary keys, while immutable types cannot.
 
 ---
 
@@ -20,7 +28,10 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+> Lists are sequences and can be indexed or sliced, whereas sets are an unordered collection of elements. Sets are useful in  
+situations where a set operation (checking whether a set is a subset of another, set differences, etc) would be used. Lists  
+are better in situations where iteration is necessary. In terms of finding a specific element, sets are faster because of their  
+use of hashes rather than index to access elements.
 
 ---
 
@@ -28,17 +39,64 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+> Lambda is a Python statement that is  used to create an anonymous function. It essentially creates functions the same way  
+that `def` does. In fact, the following two function declarations are equivalent:
+```python
+def square_root(x): return math.sqrt(x)
+square_root = lambda x: math.sqrt(x)
+```  
+Lambda is limited by the fact that it can only accept one expression as a function. However, it is still extremely useful for  
+creating one-off functions, and for functions as an argument in the `map` and `filter` functions.  
+Here's an example of using lambda for the `key` argument in `sorted`:
+```python
+sorted(tuples, key = lambda t: t[-1])
+```
+This expression takes a list of tuples (called tuples) and sets the key of the sorted function to be a lambda function.  
+The lambda function returns the last element of each individual tuple. Sorted then takes this key and sorts the list of tuples  
+by this value.
 
----
+--------
 
 ###Q4. List Comprehension, Map &amp; Filter
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+> List comprehensions are, simply put, a way to transform a list (or any iterable) into another. They use a syntax that is  
+similar to that which would be used by mathematicians. List comprehensions consist of an input list, a variable  
+that represents from that input list, an outputted expression and an optional predicate (that can be used to  
+filter the original list).  
+Many list comprehensions can be represented by an equivalent series of `map` and `filter` calls. Here's an example that takes  
+each element of a list and squares it, if it is an integer.
+```python
+listToSquare = [1,2,3,'x',4]
+squaredList = [x**2 for x in listToSquare if type(x) == types.IntType]
+```
+`x**2` is the output function, `listToSquare` is the input list, and `if type(x) == types.IntType` is the predicate that  
+filters the original list.  
+The same can be accomplished using `map` and `filter`.
+```python
+listToSquare = [1,2,3,'x',4]
+squaredList = map(lambda x: x**2, filter(lambda x: type(x) == types.IntType, listToSquare)
+```
+These both produce the same result, however, the list comprehension method is preferred due to efficiency. This is because  
+the `map` and `filter` version has two separate calls to define functions with lambda, which is a costly operation in Python.  
+  
+> List comprehensions can also be used on sets and dictionaries. The only difference between a set and list comprehension is that  
+a set is returned.  
+Here's an example that takes a list of strings and returns a set of the same strings, but capitalized.
+```python
+strings = ['abc','def','ghi']
+stringsUpper = {s.upper() for s in strings}
+```
+  
+> Dictionary comprehensions are much the same, in that they return a dictionary. Here's a comprehension that takes a list of  
+integers and creates a dictionary where the key is the original integer and the value is that integer squared.
+```python
+keys = [1,2,3,4]
+dict = {k: k**2 for k in keys}
+```
 
----
+-----------------------------------------------------------------------------------
 
 ###Complete the following problems by editing the files below:
 
