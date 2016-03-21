@@ -90,7 +90,11 @@ def remove_adjacent(nums):
     >>> remove_adjacent([])
     []
     """
-    raise NotImplementedError
+    newNums = []
+    for num in nums:
+        if len(newNums) == 0 or num != newNums[-1]:
+            newNums.append(num)
+    return newNums
 
 
 def linear_merge(list1, list2):
@@ -107,4 +111,14 @@ def linear_merge(list1, list2):
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
+    result = []
+    while len(list1) and len(list2):
+        if list1[0] < list2[0]:
+            result.append(list1.pop(0))
+        else:
+            result.append(list2.pop(0))
+
+    result.extend(list1)
+    result.extend(list2)
+    return result
     raise NotImplementedError

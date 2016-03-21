@@ -84,6 +84,7 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
+    return b[:2] + a[2:] + ' ' + a[:2] + b[2:]
     raise NotImplementedError
 
 
@@ -101,8 +102,16 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
+    if len(s) > 2:
+        if s[-3:] == 'ing':
+            return s + 'ly'
+        else:
+            return s + 'ing'
+    else:
+        return s
     raise NotImplementedError
 
+import re
 
 def not_bad(s):
     """
@@ -121,6 +130,8 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
+    return re.sub("not.*bad","good",s)
+
     raise NotImplementedError
 
 
@@ -140,4 +151,14 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
+    if(len(a) % 2 == 1):
+        aMidIndex = len(a)/2+1
+    else:
+        aMidIndex = len(a)/2
+    if(len(b) % 2 == 1):
+        bMidIndex = len(b)/2+1
+    else:
+        bMidIndex = len(b)/2
+
+    return a[:aMidIndex] + b[:bMidIndex] + a[aMidIndex:] + b[bMidIndex:]
     raise NotImplementedError
