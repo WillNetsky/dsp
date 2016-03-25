@@ -24,9 +24,6 @@ def match_ends(words):
     return count
 
 
-    raise NotImplementedError
-
-
 def front_x(words):
     """
     Given a list of strings, return a list with the strings in sorted
@@ -52,9 +49,6 @@ def front_x(words):
     return xWords + words
 
 
-    raise NotImplementedError
-
-
 def sort_last(tuples):
     """
     Given a list of non-empty tuples, return a list sorted in
@@ -71,8 +65,7 @@ def sort_last(tuples):
     """
 
     return sorted(tuples, key = lambda t: t[-1])
-    raise NotImplementedError
-
+    
 
 def remove_adjacent(nums):
     """
@@ -121,4 +114,3 @@ def linear_merge(list1, list2):
     result.extend(list1)
     result.extend(list2)
     return result
-    raise NotImplementedError
