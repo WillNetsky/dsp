@@ -21,7 +21,6 @@ def donuts(count):
     if count > 9:
         count = 'many'
     return 'Number of donuts: ' + str(count)
-    raise NotImplementedError
 
 
 def both_ends(s):
@@ -44,8 +43,6 @@ def both_ends(s):
         return ''
     return s[:2] + s[-2:]
 
-    raise NotImplementedError
-
 
 def fix_start(s):
     """
@@ -66,9 +63,6 @@ def fix_start(s):
     return s[0] + s[1:].replace(s[0], '*')
 
 
-    raise NotImplementedError
-
-
 def mix_up(a, b):
     """
     Given strings a and b, return a single string with a and b
@@ -85,7 +79,6 @@ def mix_up(a, b):
     'fizzy perm'
     """
     return b[:2] + a[2:] + ' ' + a[:2] + b[2:]
-    raise NotImplementedError
 
 
 def verbing(s):
@@ -109,7 +102,6 @@ def verbing(s):
             return s + 'ing'
     else:
         return s
-    raise NotImplementedError
 
 import re
 
@@ -132,7 +124,6 @@ def not_bad(s):
     """
     return re.sub("not.*bad","good",s)
 
-    raise NotImplementedError
 
 
 def front_back(a, b):
@@ -161,4 +152,3 @@ def front_back(a, b):
         bMidIndex = len(b)/2
 
     return a[:aMidIndex] + b[:bMidIndex] + a[aMidIndex:] + b[bMidIndex:]
-    raise NotImplementedError
