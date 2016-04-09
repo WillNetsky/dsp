@@ -70,14 +70,38 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+> Bayes' Theoreom: P(A|B) = (P(B|A)*P(A))/P(B)  
+It is necessary to note that if Elvis had an identical twin, it would be a twin brother.  
+So, you'd first find the unconditional probabilities that Elvis had either a identical or fraternal twin brother.  
+Probability that there are fraternal twins that are both boys: 1/2 * 1/2  
+Probability that there are identical twins that are both boys: 1/2  
+Probability of fraternal twins 1/125  
+Probability of identical twins 1/300  
+So, the probability that Elvis was an identical twin can be found as follows:  
+P(identical twins | twin brothers) = P(identical twin brothers)P(identical twins)/P(twin brothers)  
+P(identical twins | twin brothers) = (1/2 * 1/300) / (P(identical twin boys)*P(identical twins) + P(fraternal twin boys)*P(fraternal twins))  
+P(identical twins | twin brothers) = (1/600) / ((1/2 * 1/300) + (1/4 * 1/125))  
+P(identical twins | twin brothers) = (1/600) / (1/600 + 1/500) = 5/11  
+So there is a 5/11 chance that Elvis' twin was identical.
 
 ---
 
 ###Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+> ![xkcd: frequentists vs. bayesian]
+(https://imgs.xkcd.com/comics/frequentists_vs_bayesians.png)
+Of course. it is foolish to summarize these two methods in a three-panel comic.  
+Bayesian statistics employs prior belief in events happening to determine their ultimate probability.   
+Whereas frequentists determine probabilities from empirical samples. When new events happen, a bayesian  
+would incorporate these new findings and compare them to their prior probabilities. A frequentist was take  
+the new information and incorporate it directly into their existing sample. Much is made about the differences  
+between these two schools of thought, however, modern statisticians incorporate both of these methods when appropriate.  
+Another way to think of the difference is that frequentist thought tends to be that events have a fixed probability  
+when given an infinite sample, while the bayesian process takes prior knowledge and adjusts those probabilities  
+based on new events. In many ways, bayesian reasoning is similar to most people's natural logical process. However,  
+it also is often looked down upon in cases when the prior knowledge is seemingly biased to one's beliefs and is not  
+empirically derived.
 
 ---
 
